@@ -50,9 +50,9 @@ function useOperator(operator) {
   if (!firstValue) {
     firstValue = currentValue;
   } else {
-    console.log(firstValue, operatorValue, currentValue);
     const calculation = Calculate[operatorValue](firstValue, currentValue);
-    console.log("calculation", calculation);
+    calculatorDisplay.textContent = calculation;
+    firstValue = calculation;
   }
 
   //Ready for next value, store operator
